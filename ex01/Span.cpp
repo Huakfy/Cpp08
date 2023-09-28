@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:20:35 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/28 12:45:25 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/28 16:48:00 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,16 @@ unsigned int	Span::longestSpan() {
 	if (vect.size() <= 1)
 		throw Span::VectorTooSmall();
 	return *std::max_element(vect.begin(), vect.end()) - *std::min_element(vect.begin(), vect.end());
+}
+
+//void	Span::addRange(std::vector<int> v) {
+//	if (vect.size() + v.size() > size)
+//		throw Span::VectorTooSmall();
+//	vect.insert(vect.end(), v.begin(), v.end());
+//}
+
+void	Span::addRange(int *range, int s) {
+	if (vect.size() + s > size)
+		throw Span::VectorTooSmall();
+	vect.insert(vect.end(), range, range + s);
 }

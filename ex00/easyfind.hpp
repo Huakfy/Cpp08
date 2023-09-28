@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 11:15:07 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/27 11:54:43 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/27 12:13:17 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <vector>
 
 template<typename T>
-int	*easyfind(T arr, int i) {
-	return std::find(arr, arr.end(), i);
+int	*easyfind(T &arr, int i) {
+	return std::find(arr.begin(), arr.end(), i);
 }
 
 #endif

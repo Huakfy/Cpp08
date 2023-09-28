@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:20:37 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/28 12:38:09 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/28 16:45:41 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class Span {
 		void			addNumber(int i);
 		unsigned int	shortestSpan();
 		unsigned int	longestSpan();
+		//void			addRange(std::vector<int> v);
+		void			addRange(int *range, int s);
 
 		class	VectorTooSmall : public std::exception {
 			virtual const char *what() const throw() {

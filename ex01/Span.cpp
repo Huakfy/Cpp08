@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:20:35 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/28 16:48:00 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/28 16:53:24 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ unsigned int	Span::shortestSpan() {
 
 	std::vector<int>	temp = vect;
 	std::sort(temp.begin(), temp.end());
-
 
 	for (unsigned int i = 0; i < temp.size() - 1; i++) {
 		mini = std::min(mini, static_cast<unsigned int>(std::max(temp[i + 1], temp[i]) - std::min(temp[i + 1], temp[i])));

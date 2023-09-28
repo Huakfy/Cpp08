@@ -6,11 +6,13 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:20:31 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/28 16:49:34 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/28 17:13:16 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <cstdlib>
+#include <ctime>
 
 int	main(void) {
 	std::cout << "+----------------------Basic tests----------------------+" << std::endl;
@@ -71,6 +73,19 @@ int	main(void) {
 	S4.addRange(range, 5);
 	std::cout << "S4 shortestSpan:	" << S4.shortestSpan() << std::endl;
 	std::cout << "S4 longestSpan:		" << S4.longestSpan() << std::endl;
-	std::cout << "+-------------------------------------------------------+" << std::endl;
+	std::cout << "+--------------------Advanced tests---------------------+" << std::endl;
+	Span S5(10000);
+	std::srand((unsigned int)std::time(NULL));
+	for (int i = 0; i < 10000; i++)
+		S5.addNumber(std::rand());
+	std::cout << "10 000 Numbers in a span:" << std::endl;
+	std::cout << "S5 shortestSpan:	" << S5.shortestSpan() << std::endl;
+	std::cout << "S5 longestSpan:		" << S5.longestSpan() << std::endl;
+	Span S6(100000);
+	for (int i = 0; i < 100000; i++)
+		S6.addNumber(std::rand());
+	std::cout << "100 000 Numbers in a span:" << std::endl;
+	std::cout << "S6 shortestSpan:	" << S6.shortestSpan() << std::endl;
+	std::cout << "S6 longestSpan:		" << S6.longestSpan() << std::endl;
 	return 0;
 }
